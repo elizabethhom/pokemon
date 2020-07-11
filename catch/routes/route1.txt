@@ -1,0 +1,21 @@
+3 5
+Sunkern 2.64    1.74    1.74    1.74    grass
+Pidgey  2.84    1.96    1.91    2.32    normal
+Hoppip  2.74    1.85    2.13    2.18    grass
+Paras   2.74    2.35    2.29    1.63    bug
+Oddish  2.94    2.46    2.4     1.74        grass
+Cherubi 2.94    2.15    2.16    1.85    grass
+Sewaddle 2.94   2.11    2.51    2.01    bug
+Yungoos 3       2.18    2.74    2.07    normal
+Budew   2.84    1.96    2.24    2.29    grass
+Bellsprout  2.04    2.68    1.8 1.96    grass
+Combee  2.64    1.74    2.01    2.62    bug
+Lotad   2.84    1.85    1.96    1.74    water
+Deerling 3.24   2.18    2.18    2.73    normal
+Petilil 2.94    2.24    2.18    1.74    grass
+Cottonee 2.84   1.79    2.29    2.54    grass
+Sunkern 2.64    1.74    1.74    1.74    grass
+Pidgey  2.84    1.96    1.91    2.32    normal
+Yungoos 3       2.18    2.74    2.07    normal
+Diglett 2.24    2.07    1.85    3.17    ground
+Diglett 2.24    2.07    1.85    3.17    ground
