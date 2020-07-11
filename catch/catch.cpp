@@ -63,12 +63,9 @@ int main(int argc, char* argv[])
     if (argc != 3)
         cout << "Usage: ./catch [route] [pokedex.txt]" << endl;
     else {
-        cout << "Hi" << endl;
         string file = argv[1];
-        cout << "hello" << endl;
         string dexFile = argv[2];
 
-        
         populateRoute(file, route);
         populateChart(typeChart);
         populateDex(dexFile, pokedex);
