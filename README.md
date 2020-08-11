@@ -1,6 +1,6 @@
 # Pokémon Simulations
 
-Modeled after the Pokémon franchise's computational methods, these programs simulate three key features of the original games: battling, catching Pokémon, and calculating stats. Written as a personal project in Summer 2020 for a simulation game.
+Modeled after the Pokémon franchise's computational methods, these programs simulate three key features of the original games: battling, catching Pokémon, and calculating stats. Written as a personal project in Summer 2020 for a simulation game of ~30 people.
 
 ### Compile & Run
 * Compile programs using clang++ -Wall -Wextra
