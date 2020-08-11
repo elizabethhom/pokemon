@@ -1,9 +1,10 @@
 /*
  *      stats.cpp
- *      by Elizabeth Hom
+ *      Elizabeth Hom
  *
  *      Purpose: Calculates a pokemon's stats (HP, attack, defense, speed) at
- *               a given level.
+ *               a given level. If the level corresponds to the given
+ *               Pokemon's next evolution, then reports the evolution's stats.
  *
  *      Last modified: May 30, 2020
  */
@@ -16,8 +17,11 @@
 
 using namespace std;
 
-/*  a Pokemon describes a single pokemon, containing information about its name
- *  and relevant stats (speed, attack, defense, type, and HP).
+/*
+ * Pokémon
+ *
+ * Describes a single Pokémon: its name, type, stats (speed, attack, defense,
+ * HP), and level of next evolution.
  */
 struct Pokemon {
     string name;
@@ -47,7 +51,8 @@ int main(int argc, char* argv[])
         string pokemon;
         int level;
 
-        pokedex = populateDex(file, pokedex);          // populates pokedex
+        // Populates Pokédex
+        pokedex = populateDex(file, pokedex);
         
         cout << "Enter pokemon's name and level: ";
         cin >> pokemon >> level;
@@ -59,17 +64,18 @@ int main(int argc, char* argv[])
         else if (level == 1)
             baseStats(index, pokedex);
         else
-            generateStats(level, index, pokedex, true);      // generates & prints
-    }                                                  // stats
+            generateStats(level, index, pokedex, true);
+            // Generates & prints stats
+    }
 }
 
 /*
  *  populateDex()
  *
- *  Parameters: name of pokedex file, empty vector of pokedex pokemon
- *  Does:       populates the pokedex vector with information from file
- *              regarding each pokemon's name, HP, attack, defense, and speed.
- *  Returns:    filled pokedex
+ *  Parameters: name of pokedex file, empty vector of pokedex Pokémon
+ *  Does:       Populates the Pokédex vector with information from file
+ *              regarding each Pokémon's name, HP, attack, defense, and speed.
+ *  Returns:    Filled Pokédex
  */
 vector<Pokemon> populateDex(string file, vector<Pokemon> pokedex)
 {
@@ -82,7 +88,7 @@ vector<Pokemon> populateDex(string file, vector<Pokemon> pokedex)
     int nextEvol;
     double maxHP, maxAtk, maxDef, spAtk, spDef, maxSpd;
 
-    while(getline(input, info)) {
+    while (getline(input, info)) {
         istringstream ss(info);
 
         ss >> name >> maxHP >> maxAtk >> maxDef >> spAtk >> spDef >> maxSpd
@@ -100,10 +106,10 @@ vector<Pokemon> populateDex(string file, vector<Pokemon> pokedex)
 /*
  *  calculateStats()
  *
- *  Parameters: pokemon's name, type maximum HP, attack, defense, special
+ *  Parameters: Pokémon's name, type maximum HP, attack, defense, special
  *              attack, special defense, and speed stats.
- *  Does:       divides the max stat values by 100 and populates entry struct.
- *  Returns:    a Pokemon struct with respective stats populated.
+ *  Does:       Divides max stat values by 100 and populates entry struct.
+ *  Returns:    A Pokémon struct with respective stats populated.
  */
 Pokemon calculateStats(string name, double maxHP, double maxAtk, double maxDef, double spAtk,
                        double spDef, double maxSpd, string type, int nextEvol)
@@ -124,11 +130,11 @@ Pokemon calculateStats(string name, double maxHP, double maxAtk, double maxDef, 
 /*
  *  searchDex()
  *
- *  Parameters: name of pokemon, pokedex vector
- *  Does:       searches through the pokedex for the specific pokemon. If
- *              found, returns index within vector the pokemon is found at,
+ *  Parameters: name of Pokémon, pokedex vector
+ *  Does:       Searches through the Pokédex for the specific Pokémon. If
+ *              found, returns index within vector the Pokémon is found at,
  *              otherwise returns -1.
- *  Returns:    index with which specific pokemon is found at, -1 if not found
+ *  Returns:    Index with which specific Pokémon is found at, otherwise -1
  */
 int searchDex(string pokemon, vector<Pokemon> pokedex)
 {
@@ -151,9 +157,9 @@ int searchDex(string pokemon, vector<Pokemon> pokedex)
 /*
  *  generateStats()
  *
- *  Parameters: user-specified level of pokemon, index of pokedex pokemon is
- *              found at, pokedex vector
- *  Does:       calculates stats based on user's specified level and rounds.
+ *  Parameters: user-specified Pokémon level, index of Pokédex Pokémon is
+ *              found at, Pokédex vector
+ *  Does:       Calculates stats based on user's specified level and rounds.
  *              Prints HP, attack, defense, and speed stats.
  *  Returns:    NA
  */
@@ -166,9 +172,13 @@ void generateStats(int level, int index, vector<Pokemon> pokedex, bool first)
     defense = round(pokedex[index].defense * level);
     speed = round(pokedex[index].speed * level);
 
+    /* If provided level corresponds to the Pokémon's next evolution,
+     * generate stats of the evolution. */
     if (level >= pokedex[index].nextEvol and pokedex[index].nextEvol != 0
         and first == true) {
         
+        /* Eevee is a special Pokémon that has 9 different evolutions, each with
+         * different stats. Requires user to pick evolution before continuing. */
         if (pokedex[index].name == "eevee") {
             cout << "*** EEVEE IS EVOLVING. PICK EVOLUTION. ***" << endl;
         } else {
@@ -197,8 +207,8 @@ void generateStats(int level, int index, vector<Pokemon> pokedex, bool first)
 /*
  *  baseStats()
  *
- *  Parameters: index of pokedex pokemon is found at, pokedex vector
- *  Does:       prints the pokemon's base stats (at level 1)
+ *  Parameters: index of Pokédex Pokémon is found at, Pokédex vector
+ *  Does:       Prints the Pokémon's base stats (at Level 1)
  *  Returns:    NA
  */
 void baseStats(int index, vector<Pokemon> pokedex)
