@@ -2,7 +2,10 @@
  *      catch.cpp
  *      Elizabeth Hom
  *
- *      Purpose: Simulation of Pokémon catching encounter.
+ *      Purpose: Simulation of Pokémon catching encounter. Reads and populates
+ *      route with Pokémon from route file, randomly spawns a Pokémon to be
+ *      encountered. Automates battle between trainer's Pokémon and encounter.
+ *      If trainer's Pokémon wins, encountered Pokémon is able to be captured.
  *
  *      Last modified: June 7, 2020
  */
