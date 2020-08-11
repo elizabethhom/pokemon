@@ -1,0 +1,21 @@
+53 57
+Quagsire    3.94    2.73    2.73    1.85    Water
+Whiscash    4.24    2.78    2.67    2.40    Water
+Kingler     3.14    3.06    2.89    2.73    Water
+Hippowdon   4.2     3.07    2.68    2.12    Ground
+Tirtouga    3.12    2.53    2.71    1.57    Water
+Magikarp    2.44    1.36    1.91    2.84    Water
+Magikarp    2.44    1.36    1.91    2.84    Water
+Omanyte     2.74    2.51    2.79    1.85    Water
+Gligar      3.34    2.29    2.95    2.95    Ground
+Palossand   3.74    3.01    3.12    1.85    Ghost
+Pelipper    3.24    2.68    2.95    2.51    Water
+Relicanth   4.04    2.57    3.23    2.29    Water
+Lumineon    3.42    2.60    2.87    3.09    Water
+Seismitoad  4.14    3.06    2.73    2.71    Water
+Swanna      3.54    3.00    2.47    3.24    Water
+Stunfisk    4.22    2.71    3.10    1.79    Ground
+Nidoking    3.66    3.14    2.76    2.95    Poison
+Nidoqueen   3.84    2.92    2.98    2.76    Poison
+Swellow     3.24    2.84    2.29    3.83    Flying
+Bewear      4.44    3.06    2.62    2.40    Normal
