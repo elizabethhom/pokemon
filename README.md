@@ -18,7 +18,7 @@ Pokémon is a series of video games developed by Game Freak, published by Ninten
 ### Files
 * battle.cpp: Simulates a turn-based Pokémon battle. Prompts the user for the name, type, HP, attack, defense, and speed stats of two battling Pokémon, and automates the battle following the original franchise's computational methods. *battle* returns the outcome, the number of turns required, and final HP levels.
 * catch.cpp: Simulates a Pokémon catching encounter. Uses file I/O to determine Pokémon available to be caught on the provided route and possible Pokémon stats. Prompts the user for name and level of Pokémon combating the encounter, and automates catch encounter following the original franchise's computational methods. *catch* returns the name and level of encountered Pokémon and whether it was caught.
-* stats.cpp: Calculates a given Pokémon's HP, attack, defense, and speed stats by its level. Uses file I/O to determine Pokémon's base stats.
+* stats.cpp: Calculates a given Pokémon's HP, attack, defense, and speed stats by its level. Uses file I/O to determine Pokémon's base stats. If provided level aligns with specified Pokémon's next evolution, notifies user of evolution and returns stats of Pokémon's evolved form.
 * pokedex.txt: File I/O-friendly glossary of all Pokémon and their base stats.
 * routes/route1-6.txt: Directory containing Pokémon that can be caught on routes 1-6. Pokémon increase in level and rarity as the route number increases.
 * Makefile: Contains code that builds *battle*, *stats*, and *catch*.
