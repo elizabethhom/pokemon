@@ -1,6 +1,6 @@
 # Pokémon Simulations
 
-Modeled after the Pokémon franchise's computational methods, these programs simulate three key features of the original games: battling, catching Pokémon, and calculating stats. Written as a personal project in Summer 2020 for a simulation game of ~30 people.
+Modeled after the Pokémon franchise's computational methods, these programs simulate three key features of the original games: battling, catching Pokémon, and calculating stats. Written as a personal project in Summer 2020 to aid in backend computation for a simulation game of ~30 people.
 
 ### Background
 Pokémon is a series of video games developed by Game Freak, published by Nintendo and The Pokémon Company International. It features monster-like creatures with experience levels (1-100) and designated elemental "types" (i.e. fire, water, grass, electric, ice), where certain types offer [advantages](https://pokemondb.net/type) over another (for example, water >> fire). A given Pokémon can have up to 3 [evolutions](https://pokemondb.net/evolution), with each evolved form being more powerful than its predecessor, and are achieved through leveling up. Pokémon can be caught in the wild, and once caught, be used to battle against other Pokémon. The outcomes of battles depend on a variety of factors, including type advantages, the Pokémon's [stats](https://pokemondb.net/pokedex/all), and luck. A Pokédex refers to the complete glossary of all existing Pokémon, and can be found in *pokedex.txt*.
